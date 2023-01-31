@@ -1,16 +1,5 @@
 const getFiveWords = phrase => {
-  let spaces = 0;
-  let index = 0;
-  for (const word in phrase) {
-    if(phrase[word] === " ") {
-      spaces++;
-    }
-    if(spaces === 5) {
-      index = word;
-      break;
-    }
-  }
-  return phrase.slice(0, index);
+  return phrase.split(" ").slice(0, 5).join(" ")
 }
 
 export default getFiveWords;
